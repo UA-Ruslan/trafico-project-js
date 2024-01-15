@@ -7,14 +7,13 @@
 :root {
 	--full-screen: calc(var(--vh, 1vh) * 100);
 
-	--height-header: 10rem;
+	--height-header: 5rem;
 	--height-footer: 10rem;
 	--gl-indent: 5rem;
 }
 
 html {
 	height: 100%;
-	font: 400 calc(100vw / 1920 * 10) / 1.33 $font_1;
 }
 
 body {

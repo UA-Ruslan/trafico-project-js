@@ -12,9 +12,9 @@ const message = 'Developed by Glivera-team https://glivera-team.com/';
 // eslint-disable-next-line no-console
 console.info('%c%s', styles, message);
 // -------------------  dev widget
-if (ENV_STATUS.projectDevStatus || ENV_STATUS.projectPreviewStatus) {
-	pageWidgetInit();
-}
+// if (ENV_STATUS.projectDevStatus || ENV_STATUS.projectPreviewStatus) {
+// 	pageWidgetInit();
+// }
 // -------------------  dev widget###
 // -------------------  import sprite-icons svg
 function requireAll(r) {
