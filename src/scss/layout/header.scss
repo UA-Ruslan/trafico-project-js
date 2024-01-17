@@ -1,15 +1,18 @@
 //------------------------------------------------------------layout
 .header {
-	// position: fixed;
-	// top: 0;
-	// left: 0;
+	position: fixed;
+	top: 0;
+	left: 50%;
 
 	height: var(--height-header);
 	width: 100%;
+	max-width: 90rem;
 
-	font-size: 1rem;
+	background-color: red;
 
 	will-change: transform;
+
+	transform: translate(-50%, 0);
 
 	@include z-index(header);
 }
