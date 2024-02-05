@@ -5,16 +5,14 @@
 
 //------------------------------------------------------------base styles
 :root {
-	// --full-screen: calc(var(--vh, 1vh) * 100);
-
-	--height-header: 5rem;
+	--height-header: 14rem;
 	--height-footer: 5rem;
-	--max-page-width: 90rem;
-	// --gl-indent: 5rem;
+	--max-page-width: 160rem;
 }
 
 html {
 	height: 100%;
+	font-size: $html_font_size;
 }
 
 body {
@@ -23,8 +21,8 @@ body {
 	display: flex;
 	height: 100%;
 
-	// font-size: $font_size_base;
-	// color: $color_text_base;
+	font-family: 'RubikLight', sans-serif;
+	font-size: $font_size_base;
 
 	-webkit-text-size-adjust: none;
 	-webkit-font-smoothing: antialiased;
@@ -39,7 +37,6 @@ body {
 
 .main_container {
 	margin: 0 auto;
-	padding-top: var(--height-header);
 
 	width: 100%;
 	max-width: var(--max-page-width);
@@ -53,4 +50,8 @@ a {
 	&:focus {
 		text-decoration: underline;
 	}
+}
+
+h1 {
+	font-family: 'DMSerifDisplayRegular', sans-serif;
 }

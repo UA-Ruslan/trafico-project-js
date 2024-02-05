@@ -1,1 +1,8 @@
-@include font_face('RobotoCondensed-Regular', 'RobotoCondensed', $font_path, 400);
+@include font_face('Rubik-Light', 'RubikLight', $font_path, 300);
+@include font_face('Rubik-Regular', 'RubikRegular', $font_path, 400);
+@include font_face('Rubik-Medium', 'RubikMedium', $font_path, 500);
+@include font_face('Rubik-Bold', 'RubikBold', $font_path, 700);
+
+@include font_face('Roboto-Bold', 'Roboto-Bold', $font_path, 700);
+
+@include font_face('DMSerifDisplay-Regular', 'DMSerifDisplayRegular', $font_path, 400);
