@@ -1,7 +1,12 @@
-.logo_wrapper
-	.logo_img_wrapper
-		svg.small_logo_rectangle
-			use(xlink:href='/images/sprite/sprite.svg#small-logo-rectangle')
-		svg.large_logo_rectangle 
-			use(xlink:href='/images/sprite/sprite.svg#large-logo-rectangle')
-	.logo
+.padding_container 
+	.header_container
+		.logo_wrapper
+			.logo_img_wrapper
+				svg.small_logo_rectangle
+					use(xlink:href='/images/sprite/sprite.svg#small-logo-rectangle')
+				svg.large_logo_rectangle 
+					use(xlink:href='/images/sprite/sprite.svg#large-logo-rectangle')
+			.logo__title_wrapper
+				a.logo__title(href='/') trafico.
+
+		include ../navbar/navbar

@@ -1,0 +1,51 @@
+.navbar {
+	max-width: 60.4rem;
+	width: 100%;
+	height: 6rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.navbar_list {
+		display: flex;
+		gap: 2rem 10rem;
+
+		margin-right: 2rem;
+
+		.navbar_list__item {
+			.navbar_list__link {
+				font-size: 1.6rem;
+				font-weight: 700;
+				line-height: 1.9rem;
+				letter-spacing: 0.08rem;
+				text-transform: uppercase;
+				color: $white;
+				white-space: nowrap;
+
+				transition: $hover_transition;
+
+				&:hover,
+				&:focus {
+					color: $orange;
+
+					text-shadow: -2px -2px 3px $white;
+
+					transition: $hover_transition;
+				}
+			}
+		}
+	}
+
+	.navbar_btn {
+		@include btn_common(15.8rem);
+	}
+}
+
+@media screen and (max-width: $max_page_width) {
+	.navbar {
+		.navbar_list {
+			gap: 2rem 6.25vw;
+		}
+	}
+}

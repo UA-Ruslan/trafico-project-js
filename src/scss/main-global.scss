@@ -3,4 +3,13 @@
 @import 'base/base';
 
 @import 'layout/layout';
-@import './sections/all-sections.scss';
+
+//-----------------------------------------sections
+@import './sections/your-awesome-traffic/your-awesome-traffic.scss';
+//-----------------------------------------sections
+
+//-----------------------------------------components
+@import './components/navbar.scss';
+@import './components/dropdown/dropdown-menu.scss';
+@import './components/dropdown/dropdown-btn.scss';
+//-----------------------------------------components

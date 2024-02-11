@@ -2,6 +2,7 @@ include ../templates/global-vars
 include ../templates/global-mixins
 include ../templates/mixins/m-header
 include ../templates/mixins/m-footer
+include ../templates/mixins/m-dropdown
 
 block vars
 block project_vars
@@ -10,10 +11,11 @@ doctype
 html(lang="en" data-template-name= array.template_name)
 	head
 		+head(array)
-	
 		body
-			+header
-			main.main_content
-				block content_block
-			+footer 
+			.main_container
+				+header
+				main.main_content
+					block content_block
+				+footer 
+				+dropdown
 

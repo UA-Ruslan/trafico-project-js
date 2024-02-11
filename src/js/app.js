@@ -13,19 +13,32 @@ export default class App {
 		this.init();
 	}
 
-	importPage() {
-		if (this.pageName && this.pageName !== null) {
-			import(`./pages/${this.pageName}`)
-				.then(({ default: pageFunc }) => {
-					const newPage = pageFunc();
-				})
+	importUtilities() {
+		const windowHeight = window.innerHeight;
 
-				.catch((error) => {
-					console.error('Failed to load page, check data-template-name at root if correct');
+		import('./components/your-awesome-traffic/yourAwesomeTraffic').then(({ default: carAnim }) => {
+			const handleScroll = () => {
+				if (window.scrollY * 2 + windowHeight >= 1184) {
+					carAnim();
+					window.removeEventListener('scroll', handleScroll);
+				}
+			};
 
-					console.dir(error, error.stack);
-				});
-		}
+			window.addEventListener('scroll', handleScroll);
+
+			handleScroll();
+		});
+
+		import('./utils/scrollSmooth').then(({ default: initLocomotiveScroll }) => {
+			initLocomotiveScroll();
+		});
+
+		import('./components/header/headerActions').then(({ default: headerActions }) => {
+			headerActions();
+		});
+		import('./components/dropdown/dropdownBtnActions').then(({ default: dropdownBtnActions }) => {
+			dropdownBtnActions();
+		});
 	}
 
 	init() {
@@ -33,8 +46,7 @@ export default class App {
 		pageLoad(() => {
 			document.body.classList.add('body--loaded');
 		});
-		setTimeout(() => {
-			this.importPage();
-		}, 0);
+
+		this.importUtilities();
 	}
 }

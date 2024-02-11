@@ -7,19 +7,16 @@
 :root {
 	--height-header: 14rem;
 	--height-footer: 5rem;
-	--max-page-width: 160rem;
 }
 
 html {
-	height: 100%;
+	min-height: 100%;
 	font-size: $html_font_size;
 }
 
 body {
-	position: relative;
-
-	display: flex;
 	height: 100%;
+	width: 100%;
 
 	font-family: 'RubikLight', sans-serif;
 	font-size: $font_size_base;
@@ -39,19 +36,26 @@ body {
 	margin: 0 auto;
 
 	width: 100%;
-	max-width: var(--max-page-width);
+	max-width: $max_page_width;
+
+	background-color: $body_bg;
+}
+
+.padding_container {
+	padding: 0;
+
+	@media screen and (max-width: $point_1) {
+		& {
+			padding: 0 7vw;
+		}
+	}
 }
 
 a {
 	text-decoration: none;
-	color: $color_link_base;
-
-	&:hover,
-	&:focus {
-		text-decoration: underline;
-	}
 }
 
 h1 {
 	font-family: 'DMSerifDisplayRegular', sans-serif;
+	color: $white;
 }

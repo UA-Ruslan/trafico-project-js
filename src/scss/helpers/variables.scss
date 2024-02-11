@@ -1,18 +1,25 @@
+//---------------------------------------------colors
+$white: #ffffff;
+$black: #402b2b;
+$orange: #ee4d47;
+$yellow: rgba(255, 255, 0, 0.95);
+//---------------------------------------------colors###
+
+//---------------------------------------------transitions
+$hover_transition: all 0.2s ease-out;
+$hover_transition_1: all 0.4s ease-out;
+//---------------------------------------------transitions###
+
 //---------------------------------------------fonts
 $font_path: '../fonts/';
-$font_1: 'RobotoCondensed', sans-serif;
 $font_size_base: 1.8rem;
 $html_font_size: 10px;
 //---------------------------------------------fonts###
 
 //---------------------------------------------colors
-$white: #ffffff;
-$black: #000;
-$orange: #ee4d47;
 
 $color_text_base: $black;
-$color_link_base: #4aa3df;
-$body_bg: $white;
+$body_bg: #fef8f5;
 //---------------------------------------------colors###
 
 //---------------------------------------------z-index
@@ -24,7 +31,6 @@ $z-index: (
 //---------------------------------------------z-index###
 
 //---------------------------------------------layout
-$page_width: 96rem;
 
 //---------------------------------------------layout###
 
@@ -33,14 +39,16 @@ $gl_radius: 0.5rem;
 //---------------------------------------------global values###
 
 //---------------------------------------------media points
-$point_1: 1200px;
-$point_2: 1024px;
-$point_3: 1023.5px;
-$point_4: 768px;
-$point_5: 640px;
-$point_6: 480px;
-$point_7: 375px;
-$point_8: 320px;
+$max_page_width: 1600px;
+$point_1: 1440px;
+$point_2: 1200px;
+$point_3: 1024px;
+$point_4: 1023.5px;
+$point_5: 768px;
+$point_6: 640px;
+$point_7: 480px;
+$point_8: 375px;
+$point_9: 320px;
 //---------------------------------------------media points
 
 //---------------------------------------------forms
