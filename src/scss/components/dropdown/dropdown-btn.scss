@@ -80,3 +80,35 @@
 		right: 5rem;
 	}
 }
+
+@media screen and (max-width: $point_1) {
+	.dropdown_btn_wrapper {
+		right: 1rem;
+	}
+}
+
+@media screen and (max-width: $point_3) {
+	.dropdown_btn_wrapper {
+		right: 3rem;
+		top: 2.5rem;
+
+		opacity: 1;
+		z-index: 101;
+		.dropdown_btn {
+			&::before,
+			&::after {
+				width: 100%;
+			}
+		}
+	}
+	.body--header_on_scroll {
+		.dropdown_btn {
+			&::before,
+			&::after {
+				width: 0;
+
+				transition: $hover_transition_1;
+			}
+		}
+	}
+}

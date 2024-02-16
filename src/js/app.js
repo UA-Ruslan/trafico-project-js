@@ -3,42 +3,31 @@ import { pageLoad } from './utils';
 
 export default class App {
 	constructor() {
-		this.$htmlTag = document.querySelector('html');
-		this.pageName =
-			this.$htmlTag.dataset.templateName && this.$htmlTag.dataset.templateName.length > 0
-				? this.$htmlTag.dataset.templateName
-				: null;
-
 		this.init = this.init.bind(this);
 		this.init();
 	}
 
 	importUtilities() {
-		const windowHeight = window.innerHeight;
-
 		import('./components/your-awesome-traffic/yourAwesomeTraffic').then(({ default: carAnim }) => {
-			const handleScroll = () => {
-				if (window.scrollY * 2 + windowHeight >= 1184) {
-					carAnim();
-					window.removeEventListener('scroll', handleScroll);
-				}
-			};
+			carAnim();
+		});
 
-			window.addEventListener('scroll', handleScroll);
-
-			handleScroll();
+		import('./components/header/logo-anim').then(({ default: logoAnim }) => {
+			logoAnim();
 		});
 
 		import('./utils/scrollSmooth').then(({ default: initLocomotiveScroll }) => {
 			initLocomotiveScroll();
 		});
 
-		import('./components/header/headerActions').then(({ default: headerActions }) => {
-			headerActions();
-		});
-		import('./components/dropdown/dropdownBtnActions').then(({ default: dropdownBtnActions }) => {
-			dropdownBtnActions();
-		});
+		import('./components/dropdown/dropdown-btn-actions').then(
+			({ headerActions, dropdownBtnActions, getWindowScrolledValue, getWindowWidth }) => {
+				headerActions();
+				dropdownBtnActions();
+				getWindowScrolledValue();
+				getWindowWidth();
+			},
+		);
 	}
 
 	init() {
