@@ -1,6 +1,6 @@
 .dropdown_btn_wrapper {
 	position: fixed;
-	top: 5.4rem;
+	top: 6rem;
 	right: calc(50% - 75rem);
 
 	width: 4.5rem;
@@ -13,6 +13,8 @@
 
 	.dropdown_btn {
 		position: relative;
+		left: 0;
+		top: -0.6rem;
 
 		width: 100%;
 		height: 100%;
@@ -58,13 +60,31 @@
 	}
 }
 
-.body--header_on_scroll {
+.body--header__hidden {
 	.dropdown_btn {
 		&::before,
 		&::after {
 			width: 100%;
 
 			transition: $hover_transition_1;
+		}
+	}
+}
+
+.body--mob_active {
+	.dropdown_btn_wrapper {
+		.dropdown_btn {
+			&::before,
+			&::after {
+				width: 0;
+
+				background-color: $white;
+
+				transition: $hover_transition_1;
+			}
+		}
+		.dropdown_btn__item {
+			background-color: $white;
 		}
 	}
 }
@@ -101,7 +121,7 @@
 			}
 		}
 	}
-	.body--header_on_scroll {
+	.body--dropdown_btn__visible {
 		.dropdown_btn {
 			&::before,
 			&::after {

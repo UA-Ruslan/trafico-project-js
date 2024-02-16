@@ -21,21 +21,16 @@ export default class App {
 		});
 
 		import('./components/dropdown/dropdown-btn-actions').then(
-			({ headerActions, dropdownBtnActions, getWindowScrolledValue, getWindowWidth }) => {
-				headerActions();
+			({ dropdownBtnActions, onWindowScroll, onWindowResize }) => {
 				dropdownBtnActions();
-				getWindowScrolledValue();
-				getWindowWidth();
+				onWindowScroll();
+				onWindowResize();
 			},
 		);
 	}
 
 	init() {
 		const initLayout = layout();
-		pageLoad(() => {
-			document.body.classList.add('body--loaded');
-		});
-
 		this.importUtilities();
 	}
 }

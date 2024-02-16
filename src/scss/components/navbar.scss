@@ -49,3 +49,19 @@
 		}
 	}
 }
+
+@media screen and (max-width: $point_3) {
+	.navbar {
+		flex-direction: column;
+		justify-content: center;
+		gap: 5rem;
+
+		height: min-content;
+
+		.navbar_list {
+			flex-direction: column;
+
+			margin: 0;
+		}
+	}
+}
