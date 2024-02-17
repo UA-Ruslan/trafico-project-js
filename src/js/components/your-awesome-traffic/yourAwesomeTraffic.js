@@ -6,7 +6,7 @@ const carAnim = () => {
 	const handleScroll = () => {
 		if (window.scrollY + windowHeight >= 1184) {
 			const toggleColors = () => {
-				const carWrapper = document.querySelector('.your_awesome_traffic__car_wrapper');
+				const carWrapper = document.querySelector('.awesome_traffic__car_wrapper');
 				let count = 0;
 
 				const intervalId = setInterval(() => {
@@ -20,7 +20,7 @@ const carAnim = () => {
 			};
 
 			let tl = gsap.timeline();
-			tl.to('.your_awesome_traffic__car_wrapper', {
+			tl.to('.awesome_traffic__car_wrapper', {
 				x: 600,
 				duration: 1.5,
 				delay: 0.3,

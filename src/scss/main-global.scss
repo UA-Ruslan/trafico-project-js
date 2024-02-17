@@ -5,10 +5,12 @@
 @import 'layout/layout';
 
 //-----------------------------------------sections
-@import './sections/your-awesome-traffic/your-awesome-traffic.scss';
+@import './sections/your-awesome-traffic';
+@import './sections/about-us';
 //-----------------------------------------sections
 
 //-----------------------------------------components
-@import './components/navbar.scss';
-@import './components/dropdown/dropdown-btn.scss';
+@import './components/navbar/navbar';
+@import './components/logo/logo.scss';
+@import './components/dropdown/dropdown-btn';
 //-----------------------------------------components

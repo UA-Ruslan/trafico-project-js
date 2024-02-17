@@ -44,7 +44,7 @@ onWindowScroll();
 
 const headerDropdownBtnActions = () => {
 	body.classList.add('body--header__hidden');
-	const isDropdownBtnActive = body.classList.contains('body--mob_active');
+	const isDropdownBtnActive = body.classList.contains('body--mob_dropdown_active');
 
 	gsap.to('.dropdown_btn__first_item', {
 		rotation: isDropdownBtnActive ? -45 : 0,
@@ -58,7 +58,7 @@ const headerDropdownBtnActions = () => {
 
 const onWindowResize = () => {
 	window.addEventListener('resize', () => {
-		body.classList.remove('body--mob_active');
+		body.classList.remove('body--mob_dropdown_active');
 		onWindowScroll();
 		headerDropdownBtnActions();
 		windowWidth = window.innerWidth;
@@ -108,7 +108,7 @@ const dropdownBtnActions = () => {
 				duration: 0.5,
 			});
 		} else {
-			body.classList.toggle('body--mob_active');
+			body.classList.toggle('body--mob_dropdown_active');
 
 			headerDropdownBtnActions();
 		}

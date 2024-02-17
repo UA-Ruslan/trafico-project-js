@@ -59,3 +59,28 @@ h1 {
 	font-family: 'DMSerifDisplayRegular', sans-serif;
 	color: $white;
 }
+
+h3 {
+	font-family: 'RubikBold', sans-serif;
+	font-size: 2.4rem;
+	font-weight: 700;
+	line-height: 4rem;
+	letter-spacing: 0.24rem;
+	color: $orange;
+	text-transform: uppercase;
+}
+
+h4 {
+	font-family: 'RubikMedium', sans-serif;
+	font-size: 2.4rem;
+	font-weight: 500;
+	line-height: 3.6rem;
+}
+
+p {
+	font-family: 'RubikLight', sans-serif;
+	font-size: 1.8rem;
+	font-weight: 300;
+	line-height: 4rem;
+	color: $black;
+}

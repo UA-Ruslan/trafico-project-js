@@ -1,4 +1,8 @@
 @mixin btn_common($maxWidth: none) {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
 	width: 100%;
 	max-width: $maxWidth;
 	height: 6rem;
@@ -38,5 +42,12 @@
 
 		transform: scale(0.95);
 		transition: $hover_transition;
+	}
+
+	@media screen and (max-width: $point_6) {
+		height: 4rem;
+
+		font-size: 1rem;
+		line-height: 1rem;
 	}
 }

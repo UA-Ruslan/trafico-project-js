@@ -12,7 +12,7 @@ export default class App {
 			carAnim();
 		});
 
-		import('./components/header/logo-anim').then(({ default: logoAnim }) => {
+		import('./components/logo/logo-anim').then(({ default: logoAnim }) => {
 			logoAnim();
 		});
 
