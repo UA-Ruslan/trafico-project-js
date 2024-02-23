@@ -1,5 +1,6 @@
 import layout from 'layout/layout';
 import { pageLoad } from './utils';
+import { elementParamsOnScroll } from './utils/onScrollActions';
 
 export default class App {
 	constructor() {
@@ -8,7 +9,7 @@ export default class App {
 	}
 
 	importUtilities() {
-		import('./components/your-awesome-traffic/yourAwesomeTraffic').then(({ default: carAnim }) => {
+		import('./sections/your-awesome-traffic/yourAwesomeTraffic').then(({ default: carAnim }) => {
 			carAnim();
 		});
 
@@ -27,6 +28,13 @@ export default class App {
 				onWindowResize();
 			},
 		);
+
+		import('./sections/faq/faq').then(({ default: faqActions }) => {
+			faqActions();
+		});
+		import('./utils/onScrollActions').then(({ default: onScrollActions }) => {
+			onScrollActions(elementParamsOnScroll);
+		});
 	}
 
 	init() {

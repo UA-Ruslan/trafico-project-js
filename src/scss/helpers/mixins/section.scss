@@ -1,0 +1,5 @@
+@mixin section {
+	@media screen and (max-width: $point_1) {
+		padding: 5vw 0;
+	}
+}

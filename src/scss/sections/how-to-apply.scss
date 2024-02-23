@@ -1,0 +1,41 @@
+.how_to_apply__section {
+	padding: 8rem 24rem 6rem 12.7rem;
+
+	@include section;
+
+	.how_to_apply__container {
+		display: flex;
+		justify-content: space-between;
+
+		.how_to_apply__img_block {
+			transform-style: preserve-3d;
+			transform: scale(0.5) rotateX(90deg) rotateY(90deg);
+			transition: 0.2s ease-out;
+
+			.how_to_apply__img {
+				max-width: 72rem;
+				width: 100%;
+				height: auto;
+
+				transform: translateZ(10rem);
+			}
+		}
+		.how_to_apply__text_block {
+			opacity: 0;
+			transition: 0.5s ease-out;
+
+			.how_to_apply__text {
+				max-width: 45.5rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $point_3) {
+	.how_to_apply__section {
+		text-align: center;
+		.how_to_apply__container {
+			flex-direction: column-reverse;
+		}
+	}
+}

@@ -9,6 +9,19 @@
 	--height-footer: 5rem;
 }
 
+*::-webkit-scrollbar {
+	width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #fdd2d2;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #f49578;
+	border-radius: 0;
+}
+
 html {
 	min-height: 100%;
 	font-size: $html_font_size;
@@ -56,31 +69,21 @@ a {
 }
 
 h1 {
-	font-family: 'DMSerifDisplayRegular', sans-serif;
-	color: $white;
+	@include h1;
+}
+
+h2 {
+	@include h2;
 }
 
 h3 {
-	font-family: 'RubikBold', sans-serif;
-	font-size: 2.4rem;
-	font-weight: 700;
-	line-height: 4rem;
-	letter-spacing: 0.24rem;
-	color: $orange;
-	text-transform: uppercase;
+	@include h3;
 }
 
 h4 {
-	font-family: 'RubikMedium', sans-serif;
-	font-size: 2.4rem;
-	font-weight: 500;
-	line-height: 3.6rem;
+	@include h4;
 }
 
 p {
-	font-family: 'RubikLight', sans-serif;
-	font-size: 1.8rem;
-	font-weight: 300;
-	line-height: 4rem;
-	color: $black;
+	@include text;
 }
