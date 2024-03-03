@@ -1,0 +1,59 @@
+-
+	var slides = [
+		{
+			userFeedback: "Yes, you will need to have the land owner sign the permit application as the Permittee, and you sign the permit as the Applicant or Agent for the Permittee.",
+			userImgUrl: "../../../images/sections/our-clients/logo-1.webp",
+			userName: "Isak Pettersson",
+		},
+		{
+			userFeedback: "From most barricade or traffic control companies located in the phone book. They employ certified Traffic Control Supervisors (TCS) who can generate and certify the traffic control plan. ",
+			userImgUrl: "../../../images/sections/our-clients/logo-2.webp",
+			userName: "Simon Sandberg",
+		},
+		{
+			userFeedback: "An A-Line, or access restriction deed is a property right that has been obtained by CDOT for the sole purpose of prohibiting direct",
+			userImgUrl: "../../../images/sections/our-clients/logo-3.webp",
+			userName: "Isak Pettersson",
+		},
+		{
+			userFeedback: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur cumque cupiditate deleniti et impedit in inventore, ipsum iste, maxime, natus odit perferendis perspiciatis quasi quia quisquam quos tempore vitae.",
+			userImgUrl: "../../../images/sections/our-clients/logo-4.webp",
+			userName: "Emily Thompson",
+		},
+		{
+			userFeedback: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur cumque cupiditate deleniti et impedit in inventore, ipsum iste, maxime, natus odit perferendis perspiciatis quasi quia quisquam quos tempore vitae dolor sit amet, consectetur adipisicing elit. Asperiores consequatur cumque cupiditate deleniti et impedit in inventore, ipsum iste, maxime, natus odit perferendis perspiciatis quasi quia quisquam quos tempore vitae.",
+			userImgUrl: "../../../images/sections/our-clients/logo-5.webp",
+			userName: "Ethan Williams",
+		},
+		{
+			userFeedback: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur cumque cupiditate deleniti et impedit in inventore, ipsum iste, maxime, natus odit perferendis perspiciatis quasi quia quisquam quos tempore vitae consectetur adipisicing elit. Asperiores consequatur cumque cupiditate deleniti et impedit in inventore, ipsum iste, maxime, natus odit perferendis perspiciatis quasi quia quisquam quos tempore vitae.",
+			userImgUrl: "../../../images/sections/our-clients/logo-6.webp",
+			userName: "Jessica Miller",
+		},
+	]
+
+section.our_clients__section 
+	.our_clients__container
+		.our_clients__title_wrapper
+			h3.our_clients__title 
+				| about us
+
+			h2.our_clients__text 
+				| Out Awesome Clients
+
+		.our_clients__slider
+			.swiper_buttons_wrapper
+				svg.swiper-button-next.swiper_btn
+					use(xlink:href='/images/sprite/sprite.svg#next')
+				svg.swiper-button-prev.swiper_btn
+					use(xlink:href='/images/sprite/sprite.svg#prev')
+
+			.swiper
+				.swiper-wrapper
+					each slide in slides
+						article.swiper-slide
+							.slide__content
+								p.slide__text= slide.userFeedback
+							.slide__user_wrapper
+								img.slide__user_logo(src= slide.userImgUrl, alt= slide.userName width='60' height='60')
+								p.slide__user_name= slide.userName

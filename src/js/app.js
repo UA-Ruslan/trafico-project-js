@@ -32,8 +32,15 @@ export default class App {
 		import('./sections/faq/faq').then(({ default: faqActions }) => {
 			faqActions();
 		});
+		import('./sections/form/form').then(({ formBgAnim, formValidation }) => {
+			formBgAnim();
+			formValidation();
+		});
 		import('./utils/onScrollActions').then(({ default: onScrollActions }) => {
 			onScrollActions(elementParamsOnScroll);
+		});
+		import('./components/swiper/swiper').then(({ initSwiper }) => {
+			initSwiper();
 		});
 	}
 

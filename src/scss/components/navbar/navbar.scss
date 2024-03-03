@@ -42,6 +42,21 @@
 	}
 }
 
+.form__bottom_content {
+	.navbar {
+		justify-content: flex-end;
+		width: min-content;
+
+		.navbar_list {
+			margin-right: 0;
+		}
+
+		.navbar_btn {
+			display: none;
+		}
+	}
+}
+
 @media screen and (max-width: $max_page_width) {
 	.navbar {
 		.navbar_list {

@@ -1,21 +1,18 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/scss/scrollbar';
-import { buildSwiper, removeSwiper } from './build-swiper';
+import { buildSwiper } from './build-swiper';
 
 const CLASS_NAMES = {
-	slider: '.js-some-slider',
-	wrapper: '.js-some-slider-wrapper',
+	slider: '.our_clients__slider',
+	wrapper: '.our_clients__slider_wrapper',
 	arrowNext: '.js-some-slider-next',
 	arrowPrev: '.js-some-slider-prev',
-	pagination: '.js-some-slider-dots',
 };
 
-Swiper.use([Navigation, Pagination]);
+Swiper.use([Navigation]);
 
-/**
- * Swiper default sample
- */
 const someSlider = () => {
 	const $sliderWrappers = document.querySelectorAll(CLASS_NAMES.wrapper);
 
@@ -25,7 +22,6 @@ const someSlider = () => {
 		const $slider = $wrapper.querySelector(CLASS_NAMES.slider);
 		const $prevArrow = $wrapper.querySelector(CLASS_NAMES.arrowPrev);
 		const $nextArrow = $wrapper.querySelector(CLASS_NAMES.arrowNext);
-		const $pagination = $wrapper.querySelector(CLASS_NAMES.pagination);
 
 		buildSwiper($slider);
 
@@ -38,12 +34,6 @@ const someSlider = () => {
 				prevEl: $prevArrow,
 				nextEl: $nextArrow,
 			},
-			pagination: {
-				el: $pagination,
-				type: 'bullets',
-				clickable: true,
-			},
-
 			breakpoints: {
 				320: {
 					slidesPerView: 1,
@@ -58,9 +48,3 @@ const someSlider = () => {
 };
 
 export default someSlider;
-
-//	How to use
-
-// 	Optionally rename classes wich variable 'classNames' contains and add to your html elements wich should be a slider elements.
-//  Import some-slider.js to page or block with slider.
-//  Init slider by someSlider();

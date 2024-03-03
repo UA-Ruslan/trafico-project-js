@@ -19,12 +19,14 @@ const faqActions = () => {
 			const listItem = document.createElement('li');
 			const listQuestionWrapper = document.createElement('div');
 			const listQuestionContent = document.createElement('div');
+			const listQuestionTextWrapper = document.createElement('div');
 			const listQuestionText = document.createElement('p');
 			const listAnswerContent = document.createElement('div');
 			const listAnswerText = document.createElement('p');
 
 			listQuestionWrapper.classList.add('faq__question_wrapper');
 			listQuestionContent.classList.add('faq__question_content');
+			listQuestionTextWrapper.classList.add('faq__question_text_wrapper');
 			listQuestionText.classList.add('faq__question_text');
 			listAnswerContent.classList.add('faq__answer_content');
 			listAnswerText.classList.add('faq__answer_text');
@@ -34,7 +36,8 @@ const faqActions = () => {
 			listAnswerContent.appendChild(listAnswerText);
 			listAnswerText.textContent = faqItem.answer;
 			listQuestionWrapper.appendChild(listQuestionContent);
-			listQuestionContent.appendChild(listQuestionText);
+			listQuestionContent.appendChild(listQuestionTextWrapper);
+			listQuestionTextWrapper.appendChild(listQuestionText);
 			listQuestionText.textContent = faqItem.question;
 
 			if (index % 2 === 0) {
@@ -62,6 +65,15 @@ const faqActions = () => {
 			});
 			document.addEventListener('click', () => {
 				listItem.classList.remove('faq__list_item--active');
+			});
+
+			window.addEventListener('resize', () => {
+				const TextWrapperHeight = listQuestionTextWrapper.getBoundingClientRect().height;
+				const scrollHeight = listQuestionTextWrapper.scrollHeight;
+
+				if (TextWrapperHeight < scrollHeight) {
+					listQuestionTextWrapper.style.alignItems = 'flex-start';
+				}
 			});
 		});
 	};

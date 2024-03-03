@@ -1,7 +1,7 @@
 import gsap from 'gsap';
 
 const logoAnim = () => {
-	const logoSelectors = ['.logo', '.logo__mob_wrapper'];
+	const logoSelectors = ['.logo', '.logo__mob_wrapper', '.form__logo_wrapper'];
 	const animDuration = 0.25;
 	let tlSmallRectangle = gsap.timeline();
 	let tlLargeRectangle = gsap.timeline();
