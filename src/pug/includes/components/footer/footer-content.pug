@@ -1,0 +1,14 @@
+-
+	var list = [
+		"facebook", "twitter", "instagram" 
+	]
+.padding_container
+	.footer__content_wrapper
+		.footer__copyright_wrapper 
+			span.footer__copyright_text Copyright @ 2024
+		ul.footer__icons_list
+			each item in list
+				li.footer__list_item
+					a.footer__list_link(href=`https://www.${item}.com` target='_blank')
+						svg.footer__list_icon(class=`${item}_icon`)
+							use(xlink:href=`/images/sprite/sprite.svg#${item}`)

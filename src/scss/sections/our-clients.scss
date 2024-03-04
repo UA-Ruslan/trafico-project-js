@@ -135,6 +135,8 @@
 
 @media screen and (max-width: $point_3) {
 	.our_clients__section {
+		padding: 5rem 0;
+
 		.our_clients__container {
 			flex-direction: column;
 			.our_clients__title_wrapper {

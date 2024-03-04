@@ -201,7 +201,7 @@
 			}
 			.faq__buttons_wrapper {
 				display: flex;
-				justify-content: space-between;
+				justify-content: flex-end;
 
 				width: 100%;
 
@@ -262,7 +262,7 @@
 					}
 				}
 				.faq__close_btn--un_active {
-					opacity: 0 !important;
+					display: none;
 				}
 			}
 		}

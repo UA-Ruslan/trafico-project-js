@@ -1,15 +1,15 @@
 - 
 	var navLinkData = [
-		{title: 'about', url: '#'},
-		{title: 'how to', url: '#'},
-		{title: 'faqs', url: '#'},
+		{title: 'about', id: 'about-us'},
+		{title: 'how to', id: 'how-to-apply'},
+		{title: 'faqs', id: 'faq'},
 	]
 
 nav.navbar 
 	ul.navbar_list 
 		each item in navLinkData
 			li.navbar_list__item
-				a.navbar_list__link(href= item.url)= item.title
+				a.navbar_list__link(href=`#${item.id}`)= item.title
 	
 	button.navbar_btn 
 		| contact us

@@ -39,6 +39,9 @@ export default class App {
 		import('./utils/onScrollActions').then(({ default: onScrollActions }) => {
 			onScrollActions(elementParamsOnScroll);
 		});
+		import('./utils/scrollTo').then(({ default: scrollTo }) => {
+			scrollTo();
+		});
 		import('./components/swiper/swiper').then(({ initSwiper }) => {
 			initSwiper();
 		});

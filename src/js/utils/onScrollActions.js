@@ -116,6 +116,29 @@ export const elementParamsOnScroll = [
 			},
 		],
 	},
+	{
+		className: '.faq__close_btn',
+
+		dynamicProps: [
+			{
+				property: 'transform',
+				propertyValues: [{ startValue: -150, endValue: 0 }],
+				option: (values) => `translateX(${values[0]}px)`,
+			},
+		],
+	},
+	{
+		className: '.faq__load_more_btn',
+
+		dynamicProps: [
+			{
+				property: 'transform',
+				propertyValues: [{ startValue: 150, endValue: 0 }],
+
+				option: (values) => `translateX(${values[0]}px)`,
+			},
+		],
+	},
 ];
 
 const onScrollActions = (elProps) => {

@@ -126,13 +126,6 @@
 
 								transition: $hover_transition;
 							}
-
-							// &:invalid {
-							// 	border: 1px solid #ff0000;
-							// 	box-shadow: 0 0 0.5rem 0.5rem #ff000055;
-
-							// 	transition: $hover_transition;
-							// }
 						}
 					}
 
@@ -184,7 +177,7 @@
 
 		.form__bg_line {
 			position: absolute;
-			top: 24.5rem;
+			top: 24.9rem;
 			left: 0;
 
 			stroke-dashoffset: 2600;
@@ -203,16 +196,18 @@
 
 @media screen and (max-width: $point_3) {
 	.form__section {
+		height: 78rem;
+		padding: 5vw 0;
 		.form_container {
 			.form__top_blok_wrapper {
 				flex-direction: column-reverse;
 				align-items: center;
-				justify-content: space-around;
+				justify-content: center;
 
 				height: 100%;
 
 				.form__top_left_wrapper {
-					padding: 0;
+					padding-top: 7vw;
 				}
 
 				.form__top_right_blok {
@@ -235,6 +230,27 @@
 			.form__bottom_content {
 				display: none;
 			}
+
+			.form__bg_line {
+				top: 21.5rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $point_4) {
+	.form__section {
+		.form_container {
+			.form__top_blok_wrapper {
+				.form__top_left_wrapper {
+					.form__top_left_content {
+						.form__top_left__text {
+							font-size: 1.5rem;
+							line-height: 1.8rem;
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -245,6 +261,11 @@
 			.form__top_blok_wrapper {
 				.form__top_right_blok {
 					.form {
+						.form__input_wrapper {
+							.form__input {
+								height: 4rem;
+							}
+						}
 						.form__btn {
 							justify-content: center;
 							padding: 0 0.5rem;
