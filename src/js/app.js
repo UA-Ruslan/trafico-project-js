@@ -1,5 +1,3 @@
-import layout from 'layout/layout';
-import { pageLoad } from './utils';
 import { elementParamsOnScroll } from './utils/onScrollActions';
 
 export default class App {
@@ -9,6 +7,9 @@ export default class App {
 	}
 
 	importUtilities() {
+		import('./utils/preloader').then(({ default: preloader }) => {
+			preloader();
+		});
 		import('./sections/your-awesome-traffic/yourAwesomeTraffic').then(({ default: carAnim }) => {
 			carAnim();
 		});
@@ -21,9 +22,9 @@ export default class App {
 			initLocomotiveScroll();
 		});
 
-		import('./components/dropdown/dropdown-btn-actions').then(
-			({ dropdownBtnActions, onWindowScroll, onWindowResize }) => {
-				dropdownBtnActions();
+		import('./components/dropdown/dropdown-actions').then(
+			({ dropdownActions, onWindowScroll, onWindowResize }) => {
+				dropdownActions();
 				onWindowScroll();
 				onWindowResize();
 			},
@@ -48,7 +49,6 @@ export default class App {
 	}
 
 	init() {
-		const initLayout = layout();
 		this.importUtilities();
 	}
 }

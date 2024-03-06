@@ -42,9 +42,6 @@ const htmlPluginEntries = PAGES.map(
 
 module.exports = {
 	entry: {
-		// 'es6-promise': ['core-js/modules/es6.promise'],
-		// 'es6-array-iterator': ['core-js/modules/es6.array.iterator'],
-		// 'babel-polyfill': ['babel-polyfill'],
 		app: path.resolve(environment.paths.source, 'index.js'),
 	},
 	resolve: {
@@ -59,7 +56,6 @@ module.exports = {
 	output: {
 		filename: isWp ? 'assets/js/[name].js' : 'js/[name].js',
 		path: currentOutput,
-		// assetModuleFilename: 'images/[name][ext]',
 	},
 
 	module: {
@@ -67,13 +63,6 @@ module.exports = {
 			{
 				test: /\.pug$/,
 				oneOf: [
-					// this applies to <template lang="pug"> in Vue components
-					// {
-					//   resourceQuery: /^\?vue/,
-					//   use: ['pug-plain-loader'],
-					// },
-
-					// this applies to pug imports inside JavaScript
 					{
 						use: ['pug-loader?pretty=true'],
 					},
@@ -166,16 +155,11 @@ module.exports = {
 					noErrorOnMissing: true,
 					globOptions: {
 						dot: true,
-						// gitignore: true,
 						ignore: ['**/.gitkeep'],
 					},
 				},
 			],
 		}),
-
-		// new webpack.optimize.LimitChunkCountPlugin({
-		// 	maxChunks: 1
-		// }),
 
 		new ESLintPlugin(),
 	].concat(htmlPluginEntries),

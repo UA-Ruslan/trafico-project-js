@@ -43,11 +43,6 @@
 	line-height: 3.6rem;
 }
 
-@mixin h5 {
-}
-
-@mixin h6 {
-}
 
 @mixin text {
 	font-family: 'RubikLight', sans-serif;
@@ -55,13 +50,4 @@
 	font-weight: 300;
 	line-height: 4rem;
 	color: $black;
-
-	@media screen and (max-width: $point_3) {
-		min-width: 100%;
-	}
-
-	@media screen and (max-width: $point_4) {
-		font-size: 1.4rem;
-		line-height: 1.7rem;
-	}
 }

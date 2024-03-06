@@ -1,7 +1,7 @@
 .form__section {
 	position: relative;
 	width: 100%;
-	height: 910px;
+	height: 91rem;
 
 	padding: 14rem 33.5rem 12rem 24rem;
 
@@ -69,10 +69,12 @@
 					width: 100%;
 
 					background-color: $white;
-					box-shadow: 0px 20px 40px 0px #ee4d471a;
+					box-shadow: 0 2rem 4rem 0 #ee4d471a;
 
 					border-radius: 1rem;
 					.form__input_wrapper {
+						position: relative;
+
 						display: flex;
 						flex-direction: column;
 
@@ -98,7 +100,7 @@
 
 							padding: 1.1rem 4rem;
 
-							border: 1px solid #ee4d4780;
+							border: .1rem solid #e9c3b8;
 							border-radius: 0.5rem;
 							outline: none;
 
@@ -109,14 +111,14 @@
 							transition: $hover_transition;
 
 							&:focus {
-								border: 1px solid #0e264c;
+								border: .1rem solid #0e264c;
 								box-shadow: 0 0 0.5rem 0.5rem #0e264c51;
 
 								transition: $hover_transition;
 							}
 
 							&:hover {
-								box-shadow: 0 0 0.5rem 0.5rem #ee4c4740;
+								box-shadow: 0 0 0.5rem 0.5rem #e9c3b88e;
 
 								transition: $hover_transition;
 							}
@@ -126,6 +128,20 @@
 
 								transition: $hover_transition;
 							}
+						}
+
+						.form_input--error {
+							border: .1rem solid rgb(255, 0, 0);
+							box-shadow: 0 0 0.5rem 0.5rem rgba(255, 0, 0, 0.385);
+						}
+
+						.form__text_error {
+							position: absolute;
+							left: 0;
+							bottom: -2.4rem;
+
+							font-size: 1.4rem;
+							color: rgb(255, 0, 0);
 						}
 					}
 
@@ -164,6 +180,23 @@
 
 							transition: $hover_transition;
 						}
+					}
+
+					.form__success_message {
+						position: absolute;
+						left: 50%;
+						top: 2rem;
+
+						opacity: 0;
+
+						transform: translate(-50%, 0);
+						transition: $hover_transition;
+					}
+
+					.form__success_message--visible {
+						opacity: 1;
+
+						transition: $hover_transition;
 					}
 				}
 			}
@@ -266,9 +299,17 @@
 								height: 4rem;
 							}
 						}
+
 						.form__btn {
 							justify-content: center;
 							padding: 0 0.5rem;
+						}
+
+						.form__success_message {
+							top: 0.5rem;
+
+							font-size: 1.4rem;
+							white-space: nowrap;
 						}
 					}
 				}

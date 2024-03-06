@@ -1,30 +1,29 @@
-// scss
 import './scss/main-global.scss';
-
-// js
-import { documentReady } from 'utils';
-import { ENV_STATUS } from 'utils/constants';
-import pageWidgetInit from 'dev-vendors/dev-widget';
 import App from './js/app';
 
-// const styles = ['color: #fff', 'background: #cf8e1f'].join(';');
-
-// eslint-disable-next-line no-console
-// console.info();
-// -------------------  dev widget
-// if (ENV_STATUS.projectDevStatus || ENV_STATUS.projectPreviewStatus) {
-// 	pageWidgetInit();
-// }
-// -------------------  dev widget###
-// -------------------  import sprite-icons svg
 function requireAll(r) {
 	r.keys().forEach(r);
 }
 requireAll(require.context('./images/icons/sprite-icons/', true, /\.svg$/));
-// -------------------  import sprite-icons svg###
 
-// -------------------  init App
-documentReady(() => {
+function hidePreloader() {
+	const preloader = document.querySelector('.preloader');
+	if (preloader) {
+		preloader.classList.add('preloader--hidden');
+	}
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+	const images = document.querySelectorAll('img');
+	let loadedImagesCount = 0;
+	images.forEach((img) => {
+		loadedImagesCount += 1;
+		img.addEventListener('load', () => {
+			if (images.length === loadedImagesCount) {
+				hidePreloader();
+			}
+		});
+	});
+
 	const appInit = new App();
 });
-// -------------------  init App##

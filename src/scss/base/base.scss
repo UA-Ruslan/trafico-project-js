@@ -1,9 +1,6 @@
-@import 'family';
 @import 'reset';
 @import 'fonts';
-@import 'print';
 
-//------------------------------------------------------------base styles
 :root {
 	--height-header: 14rem;
 	--height-footer: 5rem;
@@ -39,10 +36,6 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 
 	background: $body_bg;
-
-	@supports (display: grid) {
-		display: block;
-	}
 }
 
 .main_container {
@@ -84,10 +77,6 @@ h3 {
 
 h4 {
 	@include h4;
-}
-
-h5 {
-	@include h5;
 }
 
 p {

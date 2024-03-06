@@ -16,15 +16,18 @@ section.form__section#form-section
 				form.form
 					label.form__input_wrapper
 						span.form__label Name 
-						input.form__input(type="text")
+						input.form__input.form__input_name(type="text")
+						span.form__text_error.form__name_error
 
 					label.form__input_wrapper
 						span.form__label Email address 
-						input.form__input(type="email")
+						input.form__input.form__input_email(type="text")
+						span.form__text_error.form__email_error
 
-					button.form__btn(type="submit") get started
+					button.form__btn get started
 						svg.form__btn_arrow
 							use(xlink:href='/images/sprite/sprite.svg#white-arrow')
+					span.form__success_message Sent successfully
 
 		.form__bottom_content
 			.form__logo_wrapper

@@ -84,7 +84,6 @@ const faqActions = () => {
 
 		if (startIndex > 0) {
 			faqCloseBtn.disabled = false;
-			faqCloseBtn.classList.remove('faq__close_btn--un_active');
 		}
 
 		startIndex += itemsPerPage;
@@ -104,7 +103,6 @@ const faqActions = () => {
 
 		startIndex = itemsPerPage;
 		endIndex = startIndex + itemsPerPage;
-		faqCloseBtn.classList.add('faq__close_btn--un_active');
 		faqCloseBtn.disabled = true;
 		if (startIndex < faqData.length) {
 			faqMoreBtn.disabled = false;
