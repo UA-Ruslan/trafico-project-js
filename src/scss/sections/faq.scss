@@ -262,6 +262,9 @@
 						transition: $hover_transition;
 					}
 				}
+				.faq__close_btn {
+					transform: translateX(-15rem);
+				}
 			}
 		}
 	}

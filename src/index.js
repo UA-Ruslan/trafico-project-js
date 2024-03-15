@@ -13,17 +13,14 @@ function hidePreloader() {
 	}
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-	const images = document.querySelectorAll('img');
-	let loadedImagesCount = 0;
-	images.forEach((img) => {
-		loadedImagesCount += 1;
-		img.addEventListener('load', () => {
-			if (images.length === loadedImagesCount) {
-				hidePreloader();
-			}
-		});
-	});
-
+function initializeApp() {
 	const appInit = new App();
-});
+}
+
+const intervalId = setInterval(() => {
+	if (document.readyState === 'complete') {
+		hidePreloader();
+		initializeApp();
+		clearInterval(intervalId);
+	}
+}, 100);
